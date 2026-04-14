@@ -2,12 +2,12 @@
 
 module sram_1KB_bank_lp (
     input clk,
-    input cs_n,
-    input we_n,
-    input oe_n,
-    input [7:0] addr,
-    input [31:0] din,
-    output reg [31:0] dout
+    input cs_n,//chip select
+    input we_n,//write enable
+    input oe_n,//output enable
+    input [7:0] addr,//address lines
+    input [31:0] din,//input
+    output reg [31:0] dout//output
 );
 
     wire cs = ~cs_n;
